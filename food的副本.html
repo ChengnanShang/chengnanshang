@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Halloween,food,candy,apple,pumpkin">
+    <meta name="description" content="This page is about some food in Halloween.">
+    <title>content</title>
+    <style type="text/css">
+    
+        a{text-align:center}
+
+        body{
+	       font-family:"Georgia", serif;
+	       font-weight:400;
+            background: url("http://cdn.yogeev.com/wp-content/uploads/2013/10/%E5%8D%97%E7%93%9C22.jpg") 
+            }
+
+        .ol{margin:0;padding:0;list-style-type:none}
+
+        .menu{
+	       width:100%;
+	       padding:0 16px;
+	       display:block;
+	       position:relative
+	       }
+
+        .menu > ol:first-child{
+	       width:100%;
+	       display:flex;
+	       position:relative;
+	       flex-flow:row wrap;
+	       justify-content:center
+	       }
+
+        .menu-item{
+           width:150px;
+	       position:relative;
+	       perspective:100%;
+	       cursor:pointer
+	       }
+
+        .menu-item a{
+	       width:100%;
+	       padding:16px 0;
+	       display:block;
+	       position:relative;
+	       color:#fff;
+	       border-radius:4px;
+	       transition:all .5s ease;
+	       transform-style:preserve-3d
+	       }
+
+        .menu-item a:before{
+	       width:100%;
+	       padding:16px 0;
+	       display:block;
+	       position:absolute;
+	       color:#000;
+	       border-radius:4px
+	       }
+
+        .menu > ol:first-child > .menu-item{display:block}
+
+        .menu > ol:first-child > .menu-item > a
+	       {background:#DC143C;box-shadow:0 8px 6px -6px #595959}
+
+        .menu > ol:first-child > .menu-item:nth-    of-type(2) > a,
+        .menu > ol:first-child > .menu-item:nth-    of-type(4) > a
+	       {border-left:1px solid #fff;border-right:1px solid #fff}
+
+        .menu > ol:first-child > .menu-item >       a:before            {background:#FF8C00;bottom:90%;transform:rotateX(-90deg) translate3d(0,0,75px)}
+
+        .menu > ol:first-child > .menu-item:nth-of-type(1) > a:before{content:"halloween"}
+        .menu > ol:first-child > .menu-item:nth-of-type(2) > a:before{content:"food"}
+        .menu > ol:first-child > .menu-item:nth-of-type(3) > a:before{content:"history"}
+        .menu > ol:first-child > .menu-item:nth-of-type(4) > a:before{content:"culture"}
+
+        .menu > ol:first-child > .menu-item:nth-of-type(3) > a:after,
+        .menu > ol:first-child > .menu-item:nth-of-type(4) > a:after{
+	       content:"\0025BE";
+	       width:100%;
+	       padding:30px 0 0 0;
+	       top:0;
+	       display:block;
+	       position:absolute;
+	       color:#fff;
+	       font-size:20px;
+	       text-align:center
+	       }
+
+        .menu > ol:first-child > .menu-item:hover > a{transform:rotateX(90deg)}
+
+        .menu > ol:first-child > .menu-item:nth-of-type(3):hover > a:after,
+        .menu > ol:first-child > .menu-item:nth-of-type(4):hover > a:after
+	       {content:"\0025B4";color:#2E8B57;transform:rotateX(-90deg) translate3d(0,0,75px)}
+
+        .sub-menu{
+	       background:#A9A9A9;
+	       width:100%;
+	       top:51px;
+	       display:none;
+	       position:absolute;
+	       z-index:99;
+	       border-top:1px solid #A9A9A9
+	       }
+
+        .sub-menu > .menu-item:nth-of-type(1)   {animation:fadein-down .5s .1s ease both}
+        .sub-menu > .menu-item:nth-of-type(2)   {animation:fadein-down .7s .2s ease both}
+        .sub-menu > .menu-item:nth-of-type(3){animation:fadein-down .9s .3s ease both}
+        .sub-menu > .menu-item:nth-of-type(4){animation:fadein-down .11s .4s ease both}
+        .sub-menu > .menu-item:nth-of-type(5){animation:fadein-down .13s .5s ease both}
+
+        @keyframes fadein-down{
+	    from{display:none;opacity:0;transform:tra  nslateY(-10px)}
+	   to{display:block;opacity:1;transform:translateY(0)}
+	   }
+
+        .sub-menu > .menu-item > a{background:#00CED1}
+
+        .sub-menu > .menu-item:nth-of-type(2) > a
+	   {border-top:1px solid #7FFFAA;border-bottom:1px solid #7FFFAA}
+
+        .sub-menu > .menu-item > a:before
+	   {background:#E0FFFF;top:0}
+
+
+        .menu > ol:first-child > .menu-item:hover > .sub-menu{display:block}
+
+        @media screen and (min-width:321px) and (max-width:799px){
+	   .menu{width:320px;margin:auto}
+	   }
+
+        @media (max-width:799px){
+	   .menu > ol:first-child > .menu-item{width:100%}
+	   .menu > ol:first-child > .menu-item > a{box-shadow:none}
+	
+	   .menu > ol:first-child > .menu-item:nth-of-type(2) > a,
+	   .menu > ol:first-child > .menu-item:nth-of-type(4) > a
+		{border:1px solid #fff;border-left:none;border-right:none}
+	
+	   .sub-menu > .menu-item{margin:auto}
+	   }
+        h1 {text-align:center;}
+        p {font-size:20px;}
+        img {
+            display: block;
+            margin: 0 auto;
+            }
+    </style>
+    
+</head>
+    
+<body>
+    <nav class="menu">
+	<ol>
+		<li class="menu-item"><a href="index.html">HALLOWEEN</a></li>
+		<li class="menu-item"><a href="food.html"> FOOD</a>
+        <ol class="sub-menu">
+				<li><a href=" https://www.buzzfeed.com/halloween" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>halloween guide</i></font></font></font></a ></li>
+           
+          
+			</ol>
+		</li>
+		
+        <li class="menu-item"><a href="history.html">HISTORY</a>
+           <ol class="sub-menu">
+				<li><a href=" https://www.history.com/topics/halloween" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>origins</i></font></font></font></a ></li>
+           
+           <li><a href=" https://www.goodhousekeeping.com/holidays/halloween-ideas/g3673/halloween-quotes/" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>50 fun halloween quotes</i></font></font></font></a ></li>
+             
+			</ol>
+		</li>
+		
+		<li class="menu-item"><a href=tradition.html>CULTURE</a>
+			
+            <ol class="sub-menu">
+				<li><a href=" https://www.partycity.com/ca/search?cgid=halloween-costumes" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>costumes</i></font></font></font></a ></li>
+           
+            <li><a href="https://www.timeanddate.com/holidays/canada/halloween" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>halloween in canada</i></font></font></font></a ></li>
+            
+            <li><a href="https://people.howstuffworks.com/culture-traditions/holidays-halloween/halloween7.htm" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>how it work</i></font></font></font></a ></li>
+            
+           
+			</ol>
+		</li>
+		
+        
+        
+	</ol>
+    </nav>
+    <br/>
+    <br/>
+    <br/>
+    
+    
+    <! All the word above are in a mess>
+    
+    <hr>
+    <h1 style="color:coral">Pumpkin
+    </h1>
+    <hr>
+    <img alt="pumpkin" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE-4WNWMTuOSFiX8pPcQd2p3Qw72Xru_zCGCT99UP9gAf9Q3h2">
+    <p style="color: aliceblue">
+    &nbsp&nbsp&nbsp&nbsp Their origin comes from an Irish myth about Stingy Jack, who tricked the Devil for his own monetary gain. When Jack died, God didn’t allow him into heaven, and the Devil didn’t let him into hell, so Jack was sentenced to roam the earth for eternity. In Ireland, people started to carve demonic faces out of turnips to frighten away Jack’s wandering soul. When Irish immigrants moved to the U.S., they began carving jack-o’-lanterns from pumpkins, as these were native to the region.
+    </p>
+    <hr>
+    <h1 style="color:dodgerblue">Candy
+    </h1>
+    <hr>
+    <img alt="Candies" src="data:image/jpeg;base64,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">
+    <p style="color: aliceblue">
+    &nbsp&nbsp&nbsp&nbsp Back in 1916, Christmas and Easter were the major holidays to peddle sweets, but execs were looking for a way to boost fall candy sales.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp So, they started pitching the idea of Candy Day, celebrated the second Saturday in October. They sold it as a holiday of goodwill and friendship, although it was really a manufactured holiday invented with one goal in mind: making money.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp While the candy industry was on the hunt for a fall holiday, neighborhood parents were looking for an organized activity to keep youngsters out of trouble. And by the late 1940s, passing out treats was established as an alternative to tricks.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp Once candy companies realized that trick-or-treating was here to stay, they attempted to capitalize on the holiday, shifting attention away from their Sweetest Day. They focused on getting shopkeepers to promote candy as the thing to pass out on Halloween.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp Back in the 1950s and 1960s, kids could expect to get nuts, coins, or toys from certain houses, and if they did get a sweet treat, it was typically a home-baked good. But as trick-or-treating grew in popularity, the economic and ease factors of candy began to make it the more popular giveaway.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp Busy moms liked candy as a giveaway because it was premade and prepackaged; also, it was easy to buy in bulk. And by the 1970s, candy was pretty much the sole thing given out on Halloween.
+    </p>
+    <hr>
+    <h1 style="color: crimson">Apple
+    </h1>
+    <hr>
+    <img src="data:image/jpeg;base64,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" alt="Halloween Apple">
+    <p style="color: aliceblue">
+    &nbsp&nbsp&nbsp&nbsp Now that we’ve moved on to Halloween – a holiday notorious for candy – you might be thinking there isn’t much of a connection to Ambrosia apples.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp Actually, apples have been linked to the very origins of Halloween dating as far back as 400 BC.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp Many historians attribute the creation of Halloween to the Celtic tradition of putting out fruit and nuts for the gods at the change of seasons that happened around the end of October. This offering was also believed to temporarily open the barrier between the living and the dead. As you may have guessed, this is where the custom of dressing up like ghosts and ghouls came from. If it weren’t for those delicious apples distracting the gods, we wouldn’t be dressing up to celebrate the 31st of October.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp Another old Halloween tradition is bobbing for apples. There are a couple of interesting folktales around this too. One is that apples are a way to connect to the fairy kingdom, as is water. So, bobbing for apples was supposed to greatly increase your chances of meeting a fairy. Bobbing for apples was also used as a way for couples to meet – young women would carve their initials into the apple before dropping it into the barrel of water and wait to see which suitor would bite into theirs. According to the book, The New Book of Apples, there was an old superstition that putting apple peels, pips or a whole apple under the pillow would result in dreams revealing the sleeper’s romantic future.
+        <br>
+    &nbsp&nbsp&nbsp&nbsp And, for a long time, it wasn’t candy that kids got as they went door to door, it was freshly picked apples. Did you know that up until a few decades ago, in parts of the Canadian prairies, kids didn’t say ‘trick or treat’ when heading out on Halloween? Instead, they yelled ‘Halloween Apples!’
+    </p>
+        
+    
+</body>
+</html>
+<! The Navigation Bar is from Steven and the structure is in a mess but I can't change the format or the Navigation Bar will can't be used.>

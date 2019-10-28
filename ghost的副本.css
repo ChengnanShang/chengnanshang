@@ -1,0 +1,56 @@
+body {
+      background-color: #f9f2ec;
+  background-image: linear-gradient(#f9f2ec, #b3b3b3,#f9f2ec)
+}
+h2 {
+    font-size: 100;
+    text-align: center;
+    font-family: monospace
+}
+h3 {
+    font-size: 40;
+    font-family:cursive
+}
+h4 {
+    font-size: 80
+}
+.container {
+  position: relative;
+  width: 40%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #bfbfbf;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 60px;
+    font-family:inherit;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

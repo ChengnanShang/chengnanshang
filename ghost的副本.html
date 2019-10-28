@@ -1,0 +1,268 @@
+   <link rel="stylesheet" type="text/css" href="ghost.css">
+<body style="margin-left: 300; margin-right: 300">
+    <h2>Ghost</h2>
+    <br>
+    <style type="text/css">
+    
+        a{text-align:center}
+
+        .ol{margin:0;padding:0;list-style-type:none}
+
+        .menu{
+	       width:100%;
+	       padding:0 16px;
+	       display:block;
+	       position:relative
+	       }
+
+        .menu > ol:first-child{
+	       width:100%;
+	       display:flex;
+	       position:relative;
+	       flex-flow:row wrap;
+	       justify-content:center
+	       }
+
+        .menu-item{
+           width:150px;
+	       position:relative;
+	       perspective:100%;
+	       cursor:pointer
+	       }
+
+        .menu-item a{
+	       width:100%;
+	       padding:16px 0;
+	       display:block;
+	       position:relative;
+	       color:#fff;
+	       border-radius:4px;
+	       transition:all .5s ease;
+	       transform-style:preserve-3d
+	       }
+
+        .menu-item a:before{
+	       width:100%;
+	       padding:16px 0;
+	       display:block;
+	       position:absolute;
+	       color:#000;
+	       border-radius:4px
+	       }
+
+        .menu > ol:first-child > .menu-item{display:block}
+
+        .menu > ol:first-child > .menu-item > a
+	       {background:#DC143C;box-shadow:0 8px 6px -6px #595959}
+
+        .menu > ol:first-child > .menu-item:nth-    of-type(2) > a,
+        .menu > ol:first-child > .menu-item:nth-    of-type(4) > a
+	       {border-left:1px solid #fff;border-right:1px solid #fff}
+
+        .menu > ol:first-child > .menu-item >       a:before            {background:#FF8C00;bottom:90%;transform:rotateX(-90deg) translate3d(0,0,75px)}
+
+        .menu > ol:first-child > .menu-item:nth-of-type(1) > a:before{content:"halloween"}
+        .menu > ol:first-child > .menu-item:nth-of-type(2) > a:before{content:"food"}
+        .menu > ol:first-child > .menu-item:nth-of-type(3) > a:before{content:"history"}
+        .menu > ol:first-child > .menu-item:nth-of-type(4) > a:before{content:"culture"}
+
+        .menu > ol:first-child > .menu-item:nth-of-type(3) > a:after,
+        .menu > ol:first-child > .menu-item:nth-of-type(4) > a:after{
+	       content:"\0025BE";
+	       width:100%;
+	       padding:30px 0 0 0;
+	       top:0;
+	       display:block;
+	       position:absolute;
+	       color:#fff;
+	       font-size:20px;
+	       text-align:center
+	       }
+
+        .menu > ol:first-child > .menu-item:hover > a{transform:rotateX(90deg)}
+
+        .menu > ol:first-child > .menu-item:nth-of-type(3):hover > a:after,
+        .menu > ol:first-child > .menu-item:nth-of-type(4):hover > a:after
+	       {content:"\0025B4";color:#2E8B57;transform:rotateX(-90deg) translate3d(0,0,75px)}
+
+        .sub-menu{
+	       background:#A9A9A9;
+	       width:100%;
+	       top:51px;
+	       display:none;
+	       position:absolute;
+	       z-index:99;
+	       border-top:1px solid #A9A9A9
+	       }
+
+        .sub-menu > .menu-item:nth-of-type(1)   {animation:fadein-down .5s .1s ease both}
+        .sub-menu > .menu-item:nth-of-type(2)   {animation:fadein-down .7s .2s ease both}
+        .sub-menu > .menu-item:nth-of-type(3){animation:fadein-down .9s .3s ease both}
+        .sub-menu > .menu-item:nth-of-type(4){animation:fadein-down .11s .4s ease both}
+        .sub-menu > .menu-item:nth-of-type(5){animation:fadein-down .13s .5s ease both}
+
+        @keyframes fadein-down{
+	    from{display:none;opacity:0;transform:tra  nslateY(-10px)}
+	   to{display:block;opacity:1;transform:translateY(0)}
+	   }
+
+        .sub-menu > .menu-item > a{background:#00CED1}
+
+        .sub-menu > .menu-item:nth-of-type(2) > a
+	   {border-top:1px solid #7FFFAA;border-bottom:1px solid #7FFFAA}
+
+        .sub-menu > .menu-item > a:before
+	   {background:#E0FFFF;top:0}
+
+
+        .menu > ol:first-child > .menu-item:hover > .sub-menu{display:block}
+
+        @media screen and (min-width:321px) and (max-width:799px){
+	   .menu{width:320px;margin:auto}
+	   }
+
+        @media (max-width:799px){
+	   .menu > ol:first-child > .menu-item{width:100%}
+	   .menu > ol:first-child > .menu-item > a{box-shadow:none}
+	
+	   .menu > ol:first-child > .menu-item:nth-of-type(2) > a,
+	   .menu > ol:first-child > .menu-item:nth-of-type(4) > a
+		{border:1px solid #fff;border-left:none;border-right:none}
+	
+	   .sub-menu > .menu-item{margin:auto}
+	   }
+
+</style>
+<body>
+      <nav class="menu">
+	<ol>
+		<li class="menu-item"><a href="index.html">HALLOWEEN</a></li>
+		<li class="menu-item"><a href="food.html"> FOOD</a>
+        <ol class="sub-menu">
+				<li><a href=" https://www.buzzfeed.com/halloween" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>halloween guide</i></font></font></font></a ></li>
+           
+          
+			</ol>
+		</li>
+		
+        <li class="menu-item"><a href="history.html">HISTORY</a>
+           <ol class="sub-menu">
+				<li><a href=" https://www.history.com/topics/halloween" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>origins</i></font></font></font></a ></li>
+           
+           <li><a href=" https://www.goodhousekeeping.com/holidays/halloween-ideas/g3673/halloween-quotes/" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>50 fun halloween quotes</i></font></font></font></a ></li>
+             
+			</ol>
+		</li>
+		
+		<li class="menu-item"><a href=tradition.html>CULTURE</a>
+			
+            <ol class="sub-menu">
+				<li><a href=" https://www.partycity.com/ca/search?cgid=halloween-costumes" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>costumes</i></font></font></font></a ></li>
+           
+            <li><a href="https://www.timeanddate.com/holidays/canada/halloween" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>halloween in canada</i></font></font></font></a ></li>
+            
+            <li><a href="https://people.howstuffworks.com/culture-traditions/holidays-halloween/halloween7.htm" target="_blank"><font color=#FFFFF0><font size=6><font face=Times new roman><i>how it work</i></font></font></font></a ></li>
+            
+           
+			</ol>
+		</li>
+		
+        
+        
+	</ol>
+    </nav>
+    
+    <h3>·Strange Ghost</h3>
+<div style="display: flex">
+    <div class="container">
+  <img src="data:image/jpeg;base64,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" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Ghost</div>
+  </div>
+</div>
+    <div class="container">
+  <img src="http://ku.90sjimg.com/element_pic/16/10/27/ced403df8a42947638b75b8a02a966c6.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Elf</div>
+  </div>
+</div>
+    <div class="container">
+  <img src="https://i.kukupao.com/orig/6111e8135402289cac0765d8f0f4686a" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Zombie</div>
+  </div>
+</div>
+    </div>
+    
+    <div style="display: flex">
+    <div class="container">
+  <img src="https://comps.canstockphoto.com.tw/%E5%B5%8C%E6%8E%A5-%E5%92%86%E5%93%AE-%E7%8B%BC%E4%BA%BA-%E5%90%91%E9%87%8F%E7%BE%8E%E5%B7%A5_csp39309811.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Werewolf</div>
+  </div>
+</div>
+        <div class="container">
+  <img src="https://pic2.orsoon.com/pic/201807/10125709_3e1f3c066e.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Devil</div>
+  </div>
+</div>
+    </div>
+    
+    <div style="display: flex">
+    <div class="container">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGZzK4-OBgR6lrPYVLi726pIwOOujlbvPZqmCUnP6WIQtMh4vv&s" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Ghoul</div>
+  </div>
+     </div>
+        <div class="container">
+  <img src="http://www.juimg.com/tuku/yulantu/130718/325509-130GQT01989.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Deaf</div>
+  </div>
+</div>
+        <div class="container">
+  <img src="https://pic.ruiwen.com/allimg/151030/1J4032R2-0.jpg?x-oss-process=style/qr.cnrencai" class="image">
+  <div class="overlay">
+    <div class="text">Pumpkin</div>
+  </div>
+</div>
+    </div>
+    <h3>·Fantasy Ghost</h3>
+    <div style="display: flex">
+    <div class="container">
+  <img src="http://i1.hdslb.com/bfs/archive/c6ac453565f6ccb28a258026eb4e72e605001b73.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Vampire</div>
+  </div>
+</div>
+    <div class="container">
+  <img src="http://5b0988e595225.cdn.sohucs.com/images/20181101/91fd4c82420744acb9109136ac780b6b.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Goblin</div>
+  </div>
+</div>
+    </div>
+    <div style="display: flex">
+    <div class="container">
+  <img src="https://www.drlmeng.com/wp-content/uploads/2018/12/unnamed-file-1702.jpeg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Medusa</div>
+  </div>
+</div>
+    <div class="container">
+  <img src="https://img.ruten.com.tw/s1/8/6a/2b/21707266134571_223.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Gargoyle</div>
+  </div>
+</div>
+    </div>
+    <h4>Also have:</h4>
+    <h3>·Cartoon Ghost</h3>
+    <h3>·Tradition Ghost</h3>
+    <h3>·Cartoon character</h3>
+     
+    <p2> <p align="right"><a href="surprise.html" target="_blank"><font color=#0000CD><font size=6><font face=Times new roman><i>SURPRISE</i></font></font></font></a ></p2>
+    </body>
+</body>
